@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Places View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlacesViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J3G-pV-fWM">
+                                <rect key="frame" x="107" y="64" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="rCL-cb-L0U"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="List"/>
+                                    <segment title="Map"/>
+                                </segments>
+                            </segmentedControl>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iUh-mB-skB">
+                                <rect key="frame" x="0.0" y="115" width="414" height="781"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lAH-4X-yKo">
+                                <rect key="frame" x="0.0" y="115" width="414" height="781"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" id="yvK-LY-wmQ" customClass="PlaceTableViewCell" customModule="MyPlaces" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="61.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvK-LY-wmQ" id="WV2-3S-qmY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru4-RF-CFX">
+                                                    <rect key="frame" x="20" y="20" width="374" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ru4-RF-CFX" secondAttribute="trailing" id="1Lu-e0-i59"/>
+                                                <constraint firstAttribute="bottom" secondItem="ru4-RF-CFX" secondAttribute="bottom" constant="20" id="5IE-kj-r8h"/>
+                                                <constraint firstItem="ru4-RF-CFX" firstAttribute="top" secondItem="WV2-3S-qmY" secondAttribute="top" constant="20" id="Zqa-bU-ots"/>
+                                                <constraint firstItem="ru4-RF-CFX" firstAttribute="leading" secondItem="WV2-3S-qmY" secondAttribute="leadingMargin" id="eY0-TB-4L7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="ru4-RF-CFX" id="SYV-uC-d2g"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lAH-4X-yKo" firstAttribute="top" secondItem="J3G-pV-fWM" secondAttribute="bottom" constant="20" id="D64-ve-GHb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iUh-mB-skB" secondAttribute="trailing" id="JJC-1L-fhs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lAH-4X-yKo" secondAttribute="trailing" id="RCa-JK-fnG"/>
+                            <constraint firstItem="J3G-pV-fWM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XZT-Jy-eis"/>
+                            <constraint firstItem="J3G-pV-fWM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="afe-hD-5SE"/>
+                            <constraint firstAttribute="bottom" secondItem="iUh-mB-skB" secondAttribute="bottom" id="oFS-Uw-PIl"/>
+                            <constraint firstItem="lAH-4X-yKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="q9E-5i-oXd"/>
+                            <constraint firstItem="iUh-mB-skB" firstAttribute="top" secondItem="J3G-pV-fWM" secondAttribute="bottom" constant="20" id="qaL-Ci-r4Y"/>
+                            <constraint firstAttribute="bottom" secondItem="lAH-4X-yKo" secondAttribute="bottom" id="sE1-f8-SGn"/>
+                            <constraint firstItem="iUh-mB-skB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xiL-qN-auo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseViewSegmentedControl" destination="J3G-pV-fWM" id="aFR-Jq-NKD"/>
+                        <outlet property="placesMapView" destination="iUh-mB-skB" id="CgT-0o-GAN"/>
+                        <outlet property="placesTableView" destination="lAH-4X-yKo" id="Sn9-9k-a5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="83"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
