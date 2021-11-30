@@ -8,7 +8,11 @@
 import Foundation
 
 protocol PlacesRepository {
-    func GetPlaces() -> [Place]
-    func AddPlace(place: Place) -> Void
-    func RemovePlace(placeId: Int) -> Void
+    var delegate: PlacesRepositoryDelegate? { get set }
+    
+    func getCachedPlaces() -> [Place]
+    func addPlaceToCache(place: Place) -> Void
+    func removePlaceFromCache(placeId: Int) -> Void
+    
+    func searchPlaces(with pattern: String, completionHandler: @escaping ([Place]?) -> Void)
 }

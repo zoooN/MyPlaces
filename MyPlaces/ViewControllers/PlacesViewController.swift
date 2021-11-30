@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class PlacesViewController: UIViewController, UITableViewDataSource {
+class PlacesViewController: UIViewController, UITableViewDataSource, PlacesRepositoryDelegate {
     
     @IBOutlet weak var chooseViewSegmentedControl: UISegmentedControl!
     @IBOutlet weak var placesTableView: UITableView!
@@ -17,8 +17,13 @@ class PlacesViewController: UIViewController, UITableViewDataSource {
     let listViewIndex = 0
     let mapViewIndex = 1
     
+    var placesRepository: PlacesRepository!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        placesRepository = PlacesDataRepository.shared
+        placesRepository.delegate = self
         
         prepareChooseView()
         prepareTableView()
@@ -48,14 +53,24 @@ class PlacesViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 56
+        return placesRepository.getCachedPlaces().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PlaceTableViewCell.key, for: indexPath) as! PlaceTableViewCell
-        cell.updateTitle(title: "Test777")
+        
+        let place = placesRepository.getCachedPlaces()[indexPath.row]
+        cell.update(from: place)
         
         return cell
+    }
+    
+    func placeAdded(newPlace: Place) {
+        placesTableView.reloadData()
+    }
+    
+    func placeRemoved(removedPlaceId: Int) {
+        placesTableView.reloadData()
     }
 }
 

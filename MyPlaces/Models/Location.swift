@@ -7,13 +7,7 @@
 
 import Foundation
 
-class Location {
-    
-    let lat: Double
-    let lng: Double
-
-    init(lat: Double, lng: Double) {
-        self.lat = lat
-        self.lng = lng
-    }
+struct Location {
+    var lat: Double
+    var lng: Double
 }

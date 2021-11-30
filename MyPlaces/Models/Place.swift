@@ -7,15 +7,9 @@
 
 import Foundation
 
-class Place {
-    
-    let id: Int
-    let name: String
-    let location: Location
-    
-    init(id: Int, name: String, location: Location) {
-        self.id = id
-        self.name = name
-        self.location = location
-    }
+struct Place {
+    var id: Int
+    var name: String
+    var address: String
+    var location: Location
 }

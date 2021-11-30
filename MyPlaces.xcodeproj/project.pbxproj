@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0007AF2746BBC600491D34 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0007AE2746BBC600491D34 /* AddPlaceViewController.swift */; };
+		2A0007B12746C1E300491D34 /* SearchPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0007B02746C1E300491D34 /* SearchPlaceTableViewCell.swift */; };
+		2A0007B42746C4CE00491D34 /* SearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0007B32746C4CE00491D34 /* SearchProvider.swift */; };
+		2A0007B62746C60D00491D34 /* YandexSearchProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0007B52746C60D00491D34 /* YandexSearchProvider.swift */; };
+		2A0007B82746C7CC00491D34 /* YandexPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0007B72746C7CC00491D34 /* YandexPlace.swift */; };
+		2A0007BB2746D58500491D34 /* NetworkFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0007BA2746D58500491D34 /* NetworkFetcher.swift */; };
+		2A64980127467A2D00CFDCF2 /* PlacesRepositoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64980027467A2D00CFDCF2 /* PlacesRepositoryDelegate.swift */; };
 		2A9A351F27272A5B003D9D55 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A351E27272A5B003D9D55 /* PlaceTableViewCell.swift */; };
 		2A9A352227272D97003D9D55 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A352127272D97003D9D55 /* Place.swift */; };
 		2A9A3529272730B1003D9D55 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A3528272730B1003D9D55 /* Location.swift */; };
 		2A9A352E27273227003D9D55 /* PlacesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A352D27273227003D9D55 /* PlacesRepository.swift */; };
-		2A9A35302727335F003D9D55 /* PlacesMockDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A352F2727335F003D9D55 /* PlacesMockDataRepository.swift */; };
+		2A9A35302727335F003D9D55 /* PlacesDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A352F2727335F003D9D55 /* PlacesDataRepository.swift */; };
 		2AE3035527271D7800FAB0E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3035427271D7800FAB0E6 /* AppDelegate.swift */; };
 		2AE3035727271D7800FAB0E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3035627271D7800FAB0E6 /* SceneDelegate.swift */; };
 		2AE3035927271D7800FAB0E6 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE3035827271D7800FAB0E6 /* PlacesViewController.swift */; };
@@ -21,11 +28,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0007AE2746BBC600491D34 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		2A0007B02746C1E300491D34 /* SearchPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		2A0007B32746C4CE00491D34 /* SearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProvider.swift; sourceTree = "<group>"; };
+		2A0007B52746C60D00491D34 /* YandexSearchProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexSearchProvider.swift; sourceTree = "<group>"; };
+		2A0007B72746C7CC00491D34 /* YandexPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexPlace.swift; sourceTree = "<group>"; };
+		2A0007BA2746D58500491D34 /* NetworkFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetcher.swift; sourceTree = "<group>"; };
+		2A64980027467A2D00CFDCF2 /* PlacesRepositoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepositoryDelegate.swift; sourceTree = "<group>"; };
 		2A9A351E27272A5B003D9D55 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		2A9A352127272D97003D9D55 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		2A9A3528272730B1003D9D55 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2A9A352D27273227003D9D55 /* PlacesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepository.swift; sourceTree = "<group>"; };
-		2A9A352F2727335F003D9D55 /* PlacesMockDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesMockDataRepository.swift; sourceTree = "<group>"; };
+		2A9A352F2727335F003D9D55 /* PlacesDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesDataRepository.swift; sourceTree = "<group>"; };
 		2AE3035127271D7800FAB0E6 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE3035427271D7800FAB0E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE3035627271D7800FAB0E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,13 +61,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A9A351B272729B8003D9D55 /* Places */ = {
+		2A0007B22746C47500491D34 /* SearchProviders */ = {
+			isa = PBXGroup;
+			children = (
+				2A0007B32746C4CE00491D34 /* SearchProvider.swift */,
+				2A0007B52746C60D00491D34 /* YandexSearchProvider.swift */,
+			);
+			name = SearchProviders;
+			sourceTree = "<group>";
+		};
+		2A0007B92746C99400491D34 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2A0007BA2746D58500491D34 /* NetworkFetcher.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2A9A351B272729B8003D9D55 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				2AE3035827271D7800FAB0E6 /* PlacesViewController.swift */,
 				2A9A351E27272A5B003D9D55 /* PlaceTableViewCell.swift */,
+				2A0007AE2746BBC600491D34 /* AddPlaceViewController.swift */,
+				2A0007B02746C1E300491D34 /* SearchPlaceTableViewCell.swift */,
 			);
-			path = Places;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		2A9A352027272D7B003D9D55 /* Models */ = {
@@ -61,6 +94,7 @@
 			children = (
 				2A9A352127272D97003D9D55 /* Place.swift */,
 				2A9A3528272730B1003D9D55 /* Location.swift */,
+				2A0007B72746C7CC00491D34 /* YandexPlace.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -87,7 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				2A9A352D27273227003D9D55 /* PlacesRepository.swift */,
-				2A9A352F2727335F003D9D55 /* PlacesMockDataRepository.swift */,
+				2A9A352F2727335F003D9D55 /* PlacesDataRepository.swift */,
+				2A64980027467A2D00CFDCF2 /* PlacesRepositoryDelegate.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -111,10 +146,12 @@
 		2AE3035327271D7800FAB0E6 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				2A0007B92746C99400491D34 /* Network */,
+				2A0007B22746C47500491D34 /* SearchProviders */,
 				2A9A352C2727320E003D9D55 /* Repository */,
 				2A9A352627273011003D9D55 /* Views */,
 				2A9A352527272FF3003D9D55 /* Bootstrap */,
-				2A9A351B272729B8003D9D55 /* Places */,
+				2A9A351B272729B8003D9D55 /* ViewControllers */,
 				2A9A352027272D7B003D9D55 /* Models */,
 				2AE3035D27271D7C00FAB0E6 /* Assets.xcassets */,
 				2AE3036227271D7C00FAB0E6 /* Info.plist */,
@@ -193,12 +230,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0007B62746C60D00491D34 /* YandexSearchProvider.swift in Sources */,
+				2A0007AF2746BBC600491D34 /* AddPlaceViewController.swift in Sources */,
+				2A0007B82746C7CC00491D34 /* YandexPlace.swift in Sources */,
 				2AE3035927271D7800FAB0E6 /* PlacesViewController.swift in Sources */,
 				2AE3035527271D7800FAB0E6 /* AppDelegate.swift in Sources */,
 				2A9A352227272D97003D9D55 /* Place.swift in Sources */,
+				2A0007B42746C4CE00491D34 /* SearchProvider.swift in Sources */,
+				2A0007BB2746D58500491D34 /* NetworkFetcher.swift in Sources */,
 				2AE3035727271D7800FAB0E6 /* SceneDelegate.swift in Sources */,
 				2A9A352E27273227003D9D55 /* PlacesRepository.swift in Sources */,
-				2A9A35302727335F003D9D55 /* PlacesMockDataRepository.swift in Sources */,
+				2A9A35302727335F003D9D55 /* PlacesDataRepository.swift in Sources */,
+				2A64980127467A2D00CFDCF2 /* PlacesRepositoryDelegate.swift in Sources */,
+				2A0007B12746C1E300491D34 /* SearchPlaceTableViewCell.swift in Sources */,
 				2A9A3529272730B1003D9D55 /* Location.swift in Sources */,
 				2A9A351F27272A5B003D9D55 /* PlaceTableViewCell.swift in Sources */,
 			);

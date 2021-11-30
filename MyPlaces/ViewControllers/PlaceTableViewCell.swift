@@ -14,11 +14,7 @@ class PlaceTableViewCell: UITableViewCell{
     
     static let key = "PlaceTableViewCell"
     
-    func updateTitle(title: String){
-        titleLabel.text = title
-    }
-    
-    func updateDescription(description: String){
-        //TODO
+    func update(from place: Place){
+        titleLabel.text = place.name
     }
 }
